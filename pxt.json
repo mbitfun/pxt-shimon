@@ -1,7 +1,7 @@
 {
     "name": "test-shimon",
-    "version": "0.0.7",
-    "description": "",
+    "version": "0.1.0",
+    "description": "tetest",
     "license": "MIT",
     "dependencies": {
         "core": "*",
