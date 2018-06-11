@@ -165,7 +165,7 @@ namespace shimon {
         "0303000000",
         "0205020000"
     ]
-    //% blockId=show_strings block="文字列を表示 %v スクロール時間%t"
+    //% blockId=show_strings block="文字列を表示 %v|スクロール時間%t"
     export function showString(text: string, time: number = 500): void {
         let strings: number[] = [0, 0, 0, 0]
         for (let d = 0; d < text.length; d++) {
