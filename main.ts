@@ -165,12 +165,8 @@ namespace shimon {
         "0303000000",
         "0205020000"
     ]
-    //% blockId=show_numbers block="時間を表示 %t"
-    export function showNuber(time: number): void {
-	
-    }
     //% blockId=show_strings block="文字列を表示 %v"
-    export function showString(text: string, time: number): void {
+	export function showString(text: string, time: number = 500): void {
         let strings: number[] = [0, 0, 0, 0]
         for (let d = 0; d < text.length; d++) {
             for (let x = 0; x < arr.length; x++) {
@@ -203,12 +199,16 @@ namespace shimon {
                         tmp % 2 == 1 && led.plot(y - a, b)
                         tmp = (tmp - (tmp % 2)) / 2
                     }
-                basic.pause(time)
+                basic.pause(scroll||time)
                 for (let e = 0; e < 5; e++)
                     for (let f = 0; f < 5; f++)
                         led.unplot(e, f)
             }
         }
 
+    }
+    //% blockId=set_scrollTime block="スクロール時間を設定 %t"
+    export function setScrollTime(time: number): void {
+        scroll = time
     }
 }
